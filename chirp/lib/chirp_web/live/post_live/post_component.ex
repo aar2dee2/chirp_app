@@ -8,7 +8,7 @@ defmodule ChirpWeb.PostLive.PostComponent do
     .post {
       width: 768px;
       border: 0.5px solid DarkCyan;
-      border-style: groove;
+      border-style: inset;
       padding: 8px;
       margin: 8px;
     }
@@ -18,6 +18,10 @@ defmodule ChirpWeb.PostLive.PostComponent do
     width: 50px;
     height: 50px;
     background-color: CadetBlue;
+    }
+
+    .column {
+    margin: auto;
     }
     </style>
     <div id="post-<%= @post.id %>" class="post">
