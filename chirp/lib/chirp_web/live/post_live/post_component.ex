@@ -19,20 +19,20 @@ defmodule ChirpWeb.PostLive.PostComponent do
       <div class="row">
         
         <div class="column">
-          <i class="fa fa-heart"></i> <%= @post.likes_count %>
+          <i class="far fa-heart"></i> <%= @post.likes_count %>
         </div>
         <div class="column">
-          <i class="fa fa-retweet"></i> <%= @post.reposts_count %>
+          <i class="far fa-retweet"></i> <%= @post.reposts_count %>
         </div>
 
         <div class="column">
           
           <%= live_patch to: Routes.post_index_path(@socket, :edit, @post.id) do %>
-            <i class="fa fa-edit"></i>
+            <i class="far fa-edit"></i>
           <% end %>
 
           <%= link to: "#", phx_click: "delete", phx_value_id: @post.id do%>
-            <i class="fa fa-trash-alt"></i>
+            <i class="far fa-trash-alt"></i>
           <% end %>
 
         </div>

@@ -1,5 +1,4 @@
 <h1>Timeline</h1>
-<script src="https://kit.fontawesome.com/d07169d6d4.js" crossorigin="anonymous"></script>
 
 <%= if @live_action in [:new, :edit] do %>
   <%= live_modal ChirpWeb.PostLive.FormComponent,
@@ -12,8 +11,7 @@
 
 <div id="posts">
   <%= for post <- @posts do %>
-    <%= live_component @socket, ChirpWeb.PostLive.PostComponent, id: post.id, post: post %>
-        
+    <%= live_component @socket, ChirpWeb.PostLive.PostComponent, id: post.id, post: post %>    
   <% end %>
 </div>
 
