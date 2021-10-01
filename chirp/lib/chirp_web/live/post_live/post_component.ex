@@ -4,6 +4,22 @@ defmodule ChirpWeb.PostLive.PostComponent do
   def render(assigns) do
     ~L"""
     <script src="https://kit.fontawesome.com/d07169d6d4.js" crossorigin="anonymous"></script>
+    <style>
+    .post {
+      width: 768px;
+      border: 0.5px solid DarkCyan;
+      border-style: groove;
+      padding: 8px;
+      margin: 8px;
+    }
+
+    .post-avatar {
+    vertical-align: middle;
+    width: 50px;
+    height: 50px;
+    background-color: CadetBlue;
+    }
+    </style>
     <div id="post-<%= @post.id %>" class="post">
       <div class="row">
         <div class="column column-10">
